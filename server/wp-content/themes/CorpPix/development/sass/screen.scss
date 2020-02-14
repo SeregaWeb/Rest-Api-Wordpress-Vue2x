@@ -1,0 +1,93 @@
+@import "_reset.scss";
+@import "mixin";
+@import "_modal_window.scss";
+@import "_jquery.fancybox.min.scss";
+@import "_slick.scss";
+
+
+.cover-full {
+	position: absolute;
+	display: block;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	opacity: 0;
+	font-size: 0;
+}
+
+.hidden {
+	display: none !important;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
+
+	* {
+		outline: none !important;
+		box-sizing: border-box !important;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	strong {
+		font-weight: bold;
+	}
+
+	&.popup-opened {
+		overflow: hidden;
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	.container {
+		width: 1170px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include break(desktop) {
+			width: 970px;
+		}
+		@include break(medium) {
+			width: 750px;
+		}
+		@include break(small) {
+			width: 100%;
+		}
+	}
+
+	.row {
+		margin-left: -10px;
+		margin-right: -10px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	p:empty {
+		display: none;
+	}
+}
+
+
+
+html {
+	overflow-x: hidden;
+}
